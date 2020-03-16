@@ -80,24 +80,4 @@ class Work(MultiCore):
 
 
 if __name__ == '__main__':
-    path = r"E:\共享文件夹\杂物\huoying"
-    # url = "https://v.youku.com/v_show/id_XNTI4NjExNTMy.html?spm=a2hbt.13141534.app.5~5!2~5!2~5~5~5!2~5~5!2~5!2~5!2~5~A!5"
-    url = "https://v.youku.com/v_show/id_XNTI4NjEwODg4.html?spm=a2hbt.13141534.app.5~5!2~5!2~5~5~5!2~5~5!2~5!2~5!2~5~A!"
-    client = YouGet(path=path)
-    for i in range(1, 51):
-        client.download(url + str(i))
-
-    # path = r"E:\共享文件夹\杂物\huoying"
-    # urls = [
-    #     "thunder://QUFmdHA6Ly95Z2R5ODp5Z2R5OEB5Zzc2LmR5ZHl0dC5uZXQ6MzUyNi9b0fS54rXn07Atd3d3LnlnZHk4LmNvbV278NOwyMzV3y03MjAubXA0Wlo=",
-    #     "thunder://QUFmdHA6Ly95Z2R5ODp5Z2R5OEB5Zzc2LmR5ZHl0dC5uZXQ6MzUyMC9b0fS54rXn07Atd3d3LnlnZHk4LmNvbV278NOwyMzV3y03MTkubWt2Wlo="]
-    #
-    # client = Thunder(path=path)
-    # client.download(urls)
-
-    # client = Work()
-    # n = 95
-    # data = [(10 * i + 1, 10 * (i + 1)) for i in range(int(n / 10))] + [(10 * int(n / 10) + 1, n + 1)]
-    # # data = [(10 * i, 10 * i + 1) for i in range(1, int(n / 10) + 1)]
-    # # data = [(81, 82)]
-    # client.process(data)
+    pass

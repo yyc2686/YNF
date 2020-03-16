@@ -1,10 +1,4 @@
-## 要点
-
-- [x] 1.软件定位，软件的基本功能
-- [x] 2.运行代码方法：安装环境、启动命令等
-- [x] 3.简要使用说明
-- [x] 4.代码目录结构说明
-- [x] 5.常见问题说明
+## 关于YNF的简单说明
 
 ## 项目文件结构：
 
@@ -17,17 +11,28 @@
 * requirements.txt：需要安装的第三方库及版本
 * setup.py：管理代码的打包、安装、部署问题。生成虚拟环境"patent"，并安装需要的第三方库。
 
-## 注意
+## data模块说明：
 
-* 本项目基于python3，推荐使用python3.6。版本不一致，安装第三方库可能失败。
+* config：项目各个模块的路径申明，数据库等常用配置
+* csv等14个模块，用于存储对应类型的文件
+* backup：用于存储数据库备份文件的模块
+* recycle_bin：用于存储无用文件或未知文件类型的模块
 
-  * 转到：[Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/)，自行下载并安装对应python版本的第三方库whl文件。
+## lib模块说明：
 
-  * 打开命令行，
+* common：整理python的常用但不形成规模的函数，封装成类Common
+* yeyuc_downloader：集成you_get第三方库、Thunder(迅雷)、multiprocessing(多进程)进行文件下载
+* yeyuc_kares：展示使用kares模块进行简单的机器学习模式
+* yeyuc_logging：将python日志功能的常用配置封装成一个类LoggingPython
+* yeyuc_matplotlib：基于Matplotlib.pyplot，打包各类图形成类
+* yeyuc_mongo：将pymongo的常用配置封装成一个类MongoPython
+* yeyuc_multicore：将multiprocessing的常用配置封装成一个类MultiCore
+* yeyuc_mysql：将MySQLdb的常用配置封装成一个类MysqlPython
+* yeyuc_networkx：整理networkx的常用库函数，实现复杂网络中的一些指标，并封装成类NetworkxPython
+* yeyuc_read_write：整理python常用的文件类型的读写函数，并封装成类ReadWrite
+* yeyuc_sklearn：展示使用sklearn模块进行机器学习的模式
+* yeyuc_spider：整理python爬虫的基本过程，封装成类
+* yeyuc_tensorflow：整理python爬虫的基本过程，封装成类
 
-    ```
-    cd whl文件路径
-    pip install whl文件.whl
-    ```
 
     

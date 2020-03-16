@@ -240,7 +240,7 @@ class Client():
         try:
             self.conn = pymongo.MongoClient(kwargs.get('host', 'localhost'), int(kwargs.get('port', 27017)))
             self.logger.info("\nMongoDB启动成功!\n")
-            self.user, self.passwd = kwargs.get('user', 'root'), kwargs.get('password', 'zq67_FYJ')
+            self.user, self.passwd = kwargs.get('user', 'root'), kwargs.get('password', '密码')
             self.SetDatabase('admin', user=self.user, passwd=self.passwd)
             self.SetDatabase(db, user=self.user, passwd=self.passwd)
         except Exception as errMsg:
@@ -338,11 +338,11 @@ class CollectionClient():
         path = kwargs.get('path', DIR_dict.get('JSON_DIR'))
         file = os.path.join(path, name + '.json')
         USER = kwargs.get('USER', 'root')
-        PASSWORD = kwargs.get('PASSWORD', 'zq67_FYJ')
+        PASSWORD = kwargs.get('PASSWORD', '密码')
 
         self.logger.warning("正在往当前数据库中导入json文件,形成collection：{0}".format(collection))
         try:
-            # os.system("""mongoimport -h 192.168.0.253 --authenticationDatabase admin -uroot -p zq67_FYJ -d {0} -c {1} --file {2}""".format(self.db.name, collection, file))
+            # os.system("""mongoimport -h 192.168.0.253 --authenticationDatabase admin -uroot -p 密码 -d {0} -c {1} --file {2}""".format(self.db.name, collection, file))
             os.system(
                 """mongoimport -h {0} --authenticationDatabase admin -u {1} -p {2} -d {3} -c {4} --file {5}""".format(
                     host, USER, PASSWORD, self.db.name, collection, file))
@@ -420,7 +420,7 @@ class CollectionClient():
 
     def Restore(self, db, host, **kwargs):
         """
-        mongorestore -h 172.39.215.213 --authenticationDatabase admin -uroot -p zq67_FYJ -d epo --dir /root/backup/mongo/epo
+        mongorestore -h 172.39.215.213 --authenticationDatabase admin -uroot -p 密码 -d epo --dir /root/backup/mongo/epo
         :return:
         """
         path = kwargs.get('path', DIR_dict.get('BACKUP_DIR'))
@@ -946,23 +946,5 @@ if __name__ == '__main__':
 
     # print(client.IndexInformation(col))                               # 获取集合的索引信息
     # client.DropIndex(col, key=None)                                   # 删除索引，key=None时删除全部索引（_id除外）
-
-    # host1 = '192.168.0.253'
-
-    d_yeyuc = '192.168.0.254'
-    d_yeyuc_centos = '172.39.150.110'
-    home_centos = '172.39.4.120'
-    cxzx_sq_centos = '172.39.215.213'
-
-    dbs = ['d_yeyuc_centos', 'epo', 'uspto', 'export', 'wanfang_CN', 'wanfang_US']
-
-    client = MongoPython(host=d_yeyuc)
-    for db in dbs[1:]:
-        client.Backup(db=db, host=d_yeyuc)
-    # client.Backup(db=dbs[0], host=d_yeyuc_centos)
-    # client.Restore(db=dbs[0], host=cxzx_sq_centos)
-    # client.ExportDatabase(db=dbs[0], host=d_yeyuc_centos)
-    # client.ImportDatabase(db=dbs[0], host=home_centos)
-    # client.ImportDatabase(db=dbs[0], host=cxzx_sq_centos)
 
     pass
