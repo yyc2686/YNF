@@ -1,4 +1,4 @@
-tensorflow-gpu==2.0.0
+tensorflow-gpu==2.0.1
 beautifulsoup4==4.8.2
 fake_useragent==0.1.11
 h5py==2.10.0
