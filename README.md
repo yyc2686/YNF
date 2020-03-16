@@ -6,7 +6,7 @@
 * docs：存放文档（结果，中间结果，静态文件，配置文件）
 * lib：自己编写的第三方库使用方法
 * log：日志（项目日志，其他日志）
-* tests：测试文件
+* tests：测试文件（后期开发）
 * README.md：项目描述
 * requirements.txt：需要安装的第三方库及版本
 * setup.py：管理代码的打包、安装、部署问题。生成虚拟环境"patent"，并安装需要的第三方库。
@@ -32,7 +32,3 @@
 * yeyuc_read_write：整理python常用的文件类型的读写函数，并封装成类ReadWrite
 * yeyuc_sklearn：展示使用sklearn模块进行机器学习的模式
 * yeyuc_spider：整理python爬虫的基本过程，封装成类
-* yeyuc_tensorflow：整理python爬虫的基本过程，封装成类
-
-
-    

@@ -43,13 +43,6 @@ MONGODB = {
     'PORT': 27017,
 }
 
-ONGING_PROJECT = [
-    'bin.epo',
-    'bin.export',
-    'bin.uspto',
-    'bin.wanfang',
-]
-
 LIBS = [
     'lib.common',
     'lib.yeyuc_logging',
@@ -62,7 +55,6 @@ LIBS = [
     'lib.yeyuc_read',
     'lib.yeyuc_sklearn',
     'lib.yeyuc_spider',
-    'lib.yeyuc_tensorflow',
     'lib.yeyuc_write',
 ]
 

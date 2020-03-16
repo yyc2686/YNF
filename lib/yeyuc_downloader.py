@@ -72,7 +72,7 @@ class Work(MultiCore):
 
     def job(self, data):
         urls = ["https://www.bilibili.com/video/av23740395?p={0}".format(i) for i in range(data[0], data[1])]
-        path = r'E:\共享文件夹\后端之路\后端基础\计算机操作系统\南京大学'
+        path = r'请输入路径'
 
         client = YouGet(path=path)
         for url in urls:

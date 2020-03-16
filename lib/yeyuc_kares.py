@@ -43,10 +43,8 @@ from keras.models import load_model
 from sklearn import datasets
 from sklearn.datasets import make_classification
 
-from data.config import DIR_dict, EPO_CONFIG
+from data.config import DIR_dict
 from lib.common import Common
-
-target = set(EPO_CONFIG.get("EURO")) | set(EPO_CONFIG.get("NON-EURO"))
 
 
 def fn_timer(function):
@@ -606,14 +604,6 @@ class Keras(Common):
 
 @fn_timer
 def main():
-    client = Keras()
-    # client.classifier_example(load_model=False, train_model=True, save_model=True)
-    # client.classifier_example(load_model=True, train_model=False, save_model=False)
-    # client.data()
-    client.regressor1(train_model=True)
-    # client.regressor_example(load_model=True, train_model=True, save_model=False)
-    # client.autoencoder_example(load_model=True, train_model=False, save_model=False)
-
     pass
 
 

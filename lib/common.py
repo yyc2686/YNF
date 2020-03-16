@@ -487,15 +487,4 @@ class Common():
 
 
 if __name__ == '__main__':
-    client = Common()
-    # client.timestamp()
-    # client.localtime()
-
-    path = r"C:\Users\yeyuc\Desktop\助眠"
-    files = os.listdir(path)
-    videos = [file.split('.')[0] + '.wav' for file in files]
-    # videos = [file.split('.')[0] + '.mp3' for file in files]
-    for v, a in zip(files, videos):
-        client.movie_py(os.path.join(path, v), os.path.join(path, a))
-
     pass
